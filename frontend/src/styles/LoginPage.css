@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #06b6d4
+    );
+
+    padding: 20px;
+}
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+.login-form {
+    width: 420px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.login-form h2 {
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 30px;
+
+    font-size: 28px;
+}
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.input-box {
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input-box input {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    background: rgba(5, 5, 5, 0.15);
+
+    color: black;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+/* Input focus */
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   FLOATING LABEL
+========================= */
+
+.input-box label {
+    position: absolute;
+
+    left: 15px;
+
+    top: 15px;
+
+    color: black;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+}
+
+/* Move label */
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+
+    left: 10px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 12px;
+
+    padding: 2px 8px;
+
+    border-radius: 6px;
+}
+
+/* =========================
+   LOGIN OPTIONS
+========================= */
+
+.login-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+/* Remember Me */
+
+.remember-me {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.remember-me input {
+    width: 15px;
+
+    height: 15px;
+
+    cursor: pointer;
+
+    accent-color: #4f46e5;
+}
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot-password {
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-form button {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #4f46e5;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-form button:hover {
+    background: #f4f4f4;
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   REGISTER LINK
+========================= */
+
+.register-link {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: white;
+}
+
+.register-link a {
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+    .login-form {
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+
+    .login-form h2 {
+        font-size: 24px;
+    }
+
+    .login-options {
+        font-size: 13px;
+    }
+}
